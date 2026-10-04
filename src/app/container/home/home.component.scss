@@ -1,0 +1,89 @@
+.home {
+  height: calc(100dvh - 20%);
+  width: 100%;
+  .floating-headline {
+    color: var(--primary-color);
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+  }
+
+  .floating-headline span {
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .floating-headline span:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .floating-headline span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .floating-headline span:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .floating-headline span:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .floating-headline span:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .hero-container {
+    text-align: center;
+    padding: 40px;
+  }
+
+  .main-title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+
+  .sub-title {
+    letter-spacing: 1px;
+    border-left: 3px solid black;
+    padding-left: 15px;
+    display: inline-block;
+    animation: blinkBorder 2s infinite ease-in-out;
+  }
+
+  @keyframes blinkBorder {
+    0% {
+      border-left-color: var(--secondary-color);
+      opacity: 1;
+    }
+    50% {
+      border-left-color: red;
+      opacity: 0.6;
+    }
+    100% {
+      border-left-color: pink;
+      opacity: 1;
+    }
+  }
+
+  .mybtn {
+    padding: 5px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+  }
+  .mybtn:hover {
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+    border-color: var(--primary-color);
+  }
+}
